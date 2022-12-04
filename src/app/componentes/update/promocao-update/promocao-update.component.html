@@ -1,0 +1,19 @@
+<mat-list>
+  <mat-list-item>Promoção</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<form>
+  <mat-form-field appearance="outline">
+    <mat-label>Título</mat-label>
+    <textarea name="categoriaDescricao" id="categoriaDescricao" [(ngModel)]="promocaoForm.nome" matInput placeholder="Título..."></textarea>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Taxa</mat-label>
+    <input type="number" [(ngModel)]="promocaoForm.taxa" min="0"  name="produtoQuantidade" matInput placeholder="Taxa...">
+  </mat-form-field>
+  <div style="padding-top: 8px; float: right;" mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" (click)="gotoList()">Cancelar</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="updatePromocao()">Salvar</button>
+  </div>
+</form>

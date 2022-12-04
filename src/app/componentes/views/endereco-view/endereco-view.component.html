@@ -1,0 +1,38 @@
+<mat-list>
+  <mat-list-item>Cliente</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<form>
+  <mat-form-field appearance="outline">
+    <mat-label>Cliente</mat-label>
+    <input name="loginNome" id="loginNome" readonly [(ngModel)]="enderecoForm.cliente" matInput placeholder="Cliente...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Rua</mat-label>
+    <input name="usuarioogin" id="usuarioLogin" readonly [(ngModel)]="enderecoForm.rua" matInput placeholder="Rua...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Estado</mat-label>
+    <input type="email" name="usuarioEmail" readonly id="usuarioEmail" [(ngModel)]="enderecoForm.estado" matInput placeholder="Estado...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Cidade</mat-label>
+    <input name="loginSenha" readonly id="loginSenha" [(ngModel)]="enderecoForm.cidade" matInput placeholder="Cidade...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Complemento</mat-label>
+    <input name="usuarioTelefone" id="usuarioTelefone" readonly [(ngModel)]="enderecoForm.complemento" matInput placeholder="Complemento...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Numero</mat-label>
+    <input name="usuarioRua" id="usuarioRua" readonly [(ngModel)]="enderecoForm.numero" matInput placeholder="Numero...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Cep</mat-label>
+    <input name="usuarioCep" id="usuarioCep" readonly mask="00000-000" [(ngModel)]="enderecoForm.cep" matInput placeholder="Cep...">
+  </mat-form-field>
+  <div style="padding-top: 8px; float: right;" mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" (click)="gotoList()">Voltar</button>
+  </div>
+</form>

@@ -1,0 +1,82 @@
+<mat-sidenav-container class="nav-container" style="height:861px !important;" >
+  <mat-sidenav  #sidenav class="sidenav" mode="side" style="position:absolute; top:100px; height:861px !important;" fixedTopGap="0">
+    <mat-list *ngIf="mostrarMenu" style="height:861px !important;" class="mat-list">
+      <a mat-list-item routerLink="/produtos">
+        <i class="material-icons">engineering</i>
+        Produtos
+      </a>
+      <a mat-list-item routerLink="/pedidos">
+        <i class="material-icons">shopping_basket</i>
+        Pedidos
+      </a>
+      <a mat-list-item routerLink="/usuarios">
+        <i class="material-icons">people</i>
+        Clientes
+      </a>
+      <a mat-list-item routerLink="/cupons">
+        <i class="material-icons">redeem</i>
+        Cupons
+      </a>
+      <a mat-list-item routerLink="/categorias">
+        <i class="material-icons">radio_button_checked</i>
+        Categorias
+      </a>
+      <a mat-list-item routerLink="/subCategorias">
+        <i class="material-icons">radio_button_checked</i>
+        SubCategorias
+      </a>
+      <a mat-list-item routerLink="/banners">
+        <i class="material-icons">co_present</i>
+        Banners
+      </a>
+      <a mat-list-item routerLink="/destaques">
+        <i class="material-icons">co_present</i>
+        Destaques
+      </a>
+      <a mat-list-item routerLink="/opgs">
+        <i class="material-icons">monetization_on</i>
+        Opções de Pagamento
+      </a>
+      <a mat-list-item routerLink="/promocoes">
+        <i class="material-icons">show_chart</i>
+        Promoções
+      </a>
+      <a mat-list-item routerLink="/marcas">
+        <i class="material-icons">show_chart</i>
+        Marcas
+      </a>
+      <a mat-list-item routerLink="/tamanhos">
+        <i class="material-icons">show_chart</i>
+        Tamanhos
+      </a>
+      <a mat-list-item routerLink="/cores">
+        <i class="material-icons">show_chart</i>
+        Cores
+      </a>
+      <a mat-list-item routerLink="/semelhantes">
+        <i class="material-icons">show_chart</i>
+        Semelhantes
+      </a>
+      <a mat-list-item routerLink="/enderecos">
+        <i class="material-icons">people</i>
+        Endereços
+      </a>
+      <a mat-list-item routerLink="/contatos">
+        <i class="material-icons">people</i>
+        Contatos
+      </a>
+      <a mat-list-item routerLink="/logins">
+        <i class="material-icons">account_circle</i>
+        Usuários
+      </a>
+    </mat-list>
+  </mat-sidenav>v
+  <mat-sidenav-content class="content" style="height:100%;" >
+    <button *ngIf="mostrarMenu" mat-icon-button (click)="sidenav.toggle()" class="mat-nav-button">
+      <i class="material-icons">menu</i>
+    </button>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

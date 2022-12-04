@@ -1,0 +1,35 @@
+<mat-list>
+  <mat-list-item>Pedidos</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<div class="container" style="margin-top: 80px;">
+  <div class="mat-elevation-z8">
+    <table class="table" style="background-color: #fff;">
+      <thead style="border-bottom: 1px solid black; bottom: 15px;">
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">ID</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">Cliente</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">Valor</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">Desconto</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">Emissão</td>
+        <td></td>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pedido of allPedidos">
+          <th style="font-weight: normal;text-align: center; padding-top: 20px;">{{ pedido.id }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 20px;">{{ pedido.cliente }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 20px;">{{ pedido.valor | currency: "BRL" }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 20px;">{{ pedido.desconto }}%</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 20px;">{{ pedido.emissao | date : 'dd/MM/yyyy' }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 10px;">
+            <button mat-icon-button [routerLink]="['/pedidoView',pedido.id]" color="primary">
+              <mat-icon>visibility</mat-icon>
+            </button>
+          </th>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+

@@ -1,0 +1,22 @@
+<mat-list>
+  <mat-list-item>Marca</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<form>
+  <mat-form-field appearance="outline">
+    <mat-label>Título</mat-label>
+    <textarea name="MarcaDescricao" id="marcaDescricao" [(ngModel)]="marcaForm.nome" matInput placeholder="Título..."></textarea>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Imagem</mat-label>
+    <input [(ngModel)]="marcaForm.icone" name="loginImage" matInput placeholder="Imagem...">
+    <div class="image_1">
+      <img src="{{ marcaForm.icone }}" alt="">
+    </div>
+  </mat-form-field>
+  <div style="padding-top: 8px; float: right;" mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" (click)="gotoList()">Cancelar</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="createMarca()">Salvar</button>
+  </div>
+</form>

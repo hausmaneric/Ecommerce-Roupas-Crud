@@ -1,0 +1,35 @@
+<mat-list>
+  <mat-list-item>Sub-Categorias</mat-list-item>
+  <mat-divider></mat-divider>
+  <button style="float: right; margin-top: 15px;" mat-raised-button color="accent" [routerLink]="['/subCategoriaCreate']"> <i class="material-icons">add</i> Adicionar Sub-Categoria</button>
+</mat-list>
+
+<div class="container" style="margin-top: 80px;">
+  <div class="mat-elevation-z8">
+    <table class="table" style="background-color: #fff;">
+      <thead style="border-bottom: 1px solid black; bottom: 15px;">
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">Título</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">Categoria</td>
+        <td></td>
+        <td></td>
+      </thead>
+      <tbody>
+        <tr *ngFor="let categoria of allCategoria">
+          <th style="font-weight: normal;text-align: center; padding-top: 20px;">{{ categoria.titulo }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 20px;">{{ categoria.categoria }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 10px;">
+            <button mat-icon-button [routerLink]="['/subCategoriaUpdate',categoria.id]" color="primary">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </th>
+          <th style="font-weight: normal;text-align: center; padding-top: 10px;">
+            <button mat-icon-button color="warn" (click)="onDelete(categoria.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+

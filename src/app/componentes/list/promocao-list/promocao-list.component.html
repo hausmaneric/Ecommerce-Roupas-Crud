@@ -1,0 +1,35 @@
+<mat-list>
+  <mat-list-item>Promoções</mat-list-item>
+  <mat-divider></mat-divider>
+  <button style="float: right; margin-top: 15px;" mat-raised-button color="accent" [routerLink]="['/promocaoCreate']"> <i class="material-icons">add</i> Adicionar Promoção</button>
+</mat-list>
+
+<div class="container" style="margin-top: 80px;">
+  <div class="mat-elevation-z8">
+    <table class="table" style="background-color: #fff;">
+      <thead style="border-bottom: 1px solid black; bottom: 15px;">
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">Título</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">Taxa</td>
+        <td></td>
+        <td></td>
+      </thead>
+      <tbody>
+        <tr *ngFor="let promocao of allPromocao">
+          <th style="font-weight: normal;text-align: center; padding-top: 20px;">{{ promocao.nome }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 20px;">{{ promocao.taxa }}%</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 10px;">
+            <button mat-icon-button [routerLink]="['/promocaoUpdate',promocao.id]" color="primary">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </th>
+          <th style="font-weight: normal;text-align: center; padding-top: 10px;">
+            <button mat-icon-button color="warn" (click)="onDelete(promocao.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+

@@ -1,0 +1,115 @@
+<mat-list>
+  <mat-list-item>Produto</mat-list-item>
+  <mat-divider></mat-divider>
+  <button style="float: right; margin-top: 15px;" mat-raised-button color="primary" (click)="gotoList()"> <i class="material-icons"></i> Finalizar</button>
+</mat-list>
+
+<mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form>
+      <ng-template matStepLabel>Informações Gerais</ng-template>
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input [(ngModel)]="produtoForm.nome" name="produtoNome" matInput placeholder="Nome...">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <textarea name="produtoDescricao" id="produtoDescricao" [(ngModel)]="produtoForm.descricao" matInput placeholder="Descrição..."></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Marca</mat-label>
+        <mat-select name="produtoMarca" [(ngModel)]="produtoForm.marca_id" placeholder="Marca...">
+          <mat-option *ngFor="let marcas of marca"  value="{{ marcas.id }}">{{ marcas.nome }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Tamanho</mat-label>
+        <mat-select name="produtoMarca" [(ngModel)]="produtoForm.tamanho_id" placeholder="Tamanho...">
+          <mat-option *ngFor="let tamanhos of tamanho"  value="{{ tamanhos.id }}">{{ tamanhos.titulo }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Cor</mat-label>
+        <mat-select name="produtoMarca" [(ngModel)]="produtoForm.cor_id" placeholder="Cor...">
+          <mat-option *ngFor="let cores of cor"  value="{{ cores.id }}">{{ cores.titulo }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Categoria</mat-label>
+        <mat-select name="produtoCategoria" [(ngModel)]="produtoForm.categoria_id" placeholder="Categoria...">
+          <mat-option *ngFor="let categorias of categoria" value="{{ categorias.id }}">{{ categorias.nome }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Sub Categoria</mat-label>
+        <mat-select name="produtoCategoria" [(ngModel)]="produtoForm.subcategoria_id" placeholder="Sub Categoria...">
+          <mat-option *ngFor="let subcategorias of subCategoria" value="{{ subcategorias.id }}">{{ subcategorias.titulo }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Promoção</mat-label>
+        <mat-select name="produtoPromocao" [(ngModel)]="produtoForm.promocao_id" placeholder="Promoção...">
+          <mat-option *ngFor="let promocaos of promocao" value="{{ promocaos.id }}">{{ promocaos.nome }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Semelhante</mat-label>
+        <mat-select name="produtoSemelhante" [(ngModel)]="produtoForm.semelhante_id" placeholder="Semelhante...">
+          <mat-option *ngFor="let semelhantes of semelhantes" value="{{ semelhantes.id }}">{{ semelhantes.nome }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Quantidade</mat-label>
+        <input type="number" [(ngModel)]="produtoForm.quantidade" min="0"  name="produtoQuantidade" matInput placeholder="Quantidade...">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Vendidos</mat-label>
+        <input type="number" [(ngModel)]="produtoForm.vendidos" min="0" readonly name="produtoVendido" matInput placeholder="Vendidos...">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Preço</mat-label>
+        <input type="number" [(ngModel)]="produtoForm.preco" min="0" name="produtoPreco" matInput placeholder="Preço...">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Imagem</mat-label>
+        <input [(ngModel)]="produtoForm.image_principal" min="0" name="produtoImage_principal" matInput placeholder="Imagem...">
+        <div class="image_1">
+          <img src="{{ produtoForm.image_principal }}" alt="">
+        </div>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext (click)="updateProduto()">Salvar</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form>
+      <ng-template matStepLabel>Images</ng-template>
+      <mat-form-field appearance="outline">
+        <mat-label>Imagem</mat-label>
+        <input [(ngModel)]="imgForm.image" value="" name="profissionalImages" matInput placeholder="Imagem...">
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext (click)="createImage()">Salvar Imagem</button>
+      </div>
+    </form>
+    <div class="container">
+      <div class="images">
+        <div class="image" *ngFor="let image of img">
+          <img src="{{ image.image }}" alt="">
+          <div class="actions">
+            <button class="btn_edit" mat-icon-button color="primary">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button class="btn_delete" mat-icon-button color="warn" (click)="onDeleteImage(image.id, image.prod_id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-step>
+</mat-stepper>
+
+
+

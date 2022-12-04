@@ -1,0 +1,45 @@
+<mat-list>
+  <mat-list-item>Produtos</mat-list-item>
+  <mat-divider></mat-divider>
+  <button style="float: right; margin-top: 15px;" mat-raised-button color="accent" [routerLink]="['/produtoCreate']"> <i class="material-icons">add</i> Adicionar Produto</button>
+</mat-list>
+
+<div class="container" style="margin-top: 80px;">
+  <div class="mat-elevation-z8">
+    <table class="table" style="background-color: #fff;">
+      <thead style="border-bottom: 1px solid black; bottom: 15px;">
+        <td style="font-weight: bold; text-align: center; padding: 15px 0; width: 60px;">Imagem</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">Nome</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">Marca</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0; width: 25px;">Quantidade</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0;">Vendidos</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0; padding-right: 45px;">Preço</td>
+        <td style="font-weight: bold; text-align: center; padding: 15px 0; padding-right: 45px;">Promoção</td>
+        <td></td>
+        <td></td>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produto of allProduto">
+          <th style="font-weight: normal;text-align: center; padding-top: 10px;"> <img style="width: 70px; height: 70px;" src="{{ produto.image_principal }}" alt=""></th>
+          <th style="font-weight: normal;text-align: center; padding-top: 35px;">{{ produto.nome }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 35px; "> {{ produto.marca }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 35px; width: 20px;">{{ produto.quantidade }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 35px; width: 20px;">{{ produto.vendidos }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 35px;"> {{ produto.preco | currency: 'BRL' }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 35px;"> {{ produto.promocaoValor | currency: 'BRL' }}</th>
+          <th style="font-weight: normal;text-align: center; padding-top: 20px;">
+            <button mat-icon-button [routerLink]="['/produtoUpdate',produto.id]" color="primary">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </th>
+          <th style="font-weight: normal;text-align: center; padding-top: 20px;">
+            <button mat-icon-button color="warn" (click)="onDelete(produto.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+

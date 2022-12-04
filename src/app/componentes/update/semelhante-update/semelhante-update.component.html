@@ -1,0 +1,15 @@
+<mat-list>
+  <mat-list-item>Semelhante</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<form>
+  <mat-form-field appearance="outline">
+    <mat-label>Título</mat-label>
+    <textarea name="categoriaDescricao" id="categoriaDescricao" [(ngModel)]="semelhanteForm.nome" matInput placeholder="Título..."></textarea>
+  </mat-form-field>
+  <div style="padding-top: 8px; float: right;" mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" (click)="gotoList()">Cancelar</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="updateSemelhante()">Salvar</button>
+  </div>
+</form>

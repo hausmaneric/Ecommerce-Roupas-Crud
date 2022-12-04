@@ -1,0 +1,10 @@
+<mat-toolbar *ngIf="mostrarMenu" class="header mat-elevation-z4">
+  <span>
+    <a routerLink="/">
+      <i class="material-icons"></i>
+      <img class="img_perfil" src="{{ imgUsuario }}" alt="">
+      <h1 class="title" style="color: white;">{{nomeUsuario}}</h1>
+    </a>
+  </span>
+  <button style="position:absolute; right: 1%;background: hsla(160, 29%, 36%, 1); border: none; color: white;" routerLink="/login" class="mat-nav-button"><i class="material-icons">logout</i></button>
+</mat-toolbar>

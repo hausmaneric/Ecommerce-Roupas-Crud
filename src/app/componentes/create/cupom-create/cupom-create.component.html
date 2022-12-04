@@ -1,0 +1,44 @@
+<mat-list>
+  <mat-list-item>Categoria</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<form>
+  <mat-form-field appearance="outline">
+    <mat-label>Título</mat-label>
+    <input [(ngModel)]="cupomForm.titulo" name="cupomNome" matInput placeholder="Título...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Descrição</mat-label>
+    <textarea name="categoriaDescricao" id="categoriaDescricao" [(ngModel)]="cupomForm.descricao" matInput placeholder="Descrição..."></textarea>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Desconto Valor</mat-label>
+    <input type="number" min="0" [(ngModel)]="cupomForm.desconto_valor" name="cupomValor" matInput placeholder="Desconto Valor...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Desconto Porcentagem</mat-label>
+    <input type="number" min="0" [(ngModel)]="cupomForm.desconto_porce" name="cupomPorc" matInput placeholder="Desconto Porcentagem...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Validade</mat-label>
+    <input name="cupomValidade" [(ngModel)]="cupomForm.validade" required name="validade" matInput [matDatepicker]="picker">
+    <mat-hint>DD/MM/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Imagem</mat-label>
+    <input [(ngModel)]="cupomForm.image" min="0" name="cupomImagel" matInput placeholder="Imagem...">
+    <div class="image_1">
+      <img src="{{ cupomForm.image }}" alt="">
+    </div>
+  </mat-form-field>
+  <mat-checkbox class="example-margin" [(ngModel)]="cupomForm.utilizado" required name="utilizado">Utilizado</mat-checkbox>
+  <br>
+  <mat-checkbox class="example-margin" [(ngModel)]="cupomForm.vencido" required name="vencido">Vencido</mat-checkbox>
+  <div style="padding-top: 8px; float: right;" mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" (click)="gotoList()">Cancelar</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="createCupom()">Salvar</button>
+  </div>
+</form>

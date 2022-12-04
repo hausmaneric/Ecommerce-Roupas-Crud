@@ -1,0 +1,2 @@
+*.ecommerce_roupas filter=lfs diff=lfs merge=lfs -text
+.componentes filter=lfs diff=lfs merge=lfs -text

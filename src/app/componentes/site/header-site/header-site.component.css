@@ -1,0 +1,46 @@
+nav.navbar{
+  margin: -16px;
+}
+
+a.navbar-brand{
+  color: #ffffff;
+  font-size: 40px;
+}
+
+form.d-flex{
+  margin: 0 auto;
+}
+
+input.form-control{
+  width: 500px;
+}
+
+button.btn{
+  border: 0;
+  color: #212529;
+  margin-left: -14px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ced4da;
+  border-right: 1px solid #ced4da;
+  border-top: 1px solid #ced4da;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+button.btn:hover{
+  background-color: #ffffff !important;
+  color: #212529 !important;
+}
+
+.demo-section + .demo-section {
+  margin-top: 16px;
+}
+
+a .material-icons{
+  font-size: 30px;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+

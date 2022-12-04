@@ -1,0 +1,106 @@
+h1{
+  text-align: center;
+  margin-top: 70px;
+  font-size: 40px;
+}
+
+.clear{
+  clear: both;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10%;
+}
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 10%;
+  height: 150px;
+  width: 150px;
+}
+.carousel-inner {
+  padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgb(44, 44, 47);
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+.card-title{
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.card-body button{
+  left: 19%;
+  margin-top: -15px;
+}
+
+.card-body button mat-icon{
+  width: 100%;
+  color: #fce748;
+  font-size: 20px;
+  text-align: center;
+}
+
+.preco{
+  text-align: center;
+  width: 50%;
+  float: left;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.promocao{
+  text-align: center;
+  width: 50%;
+  float: right;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.btn-comprar{
+  float: left;
+  margin-top: 8px;
+  width: 130px;
+  height: 35px;
+  border: 1px solid #212529;
+  color: white;
+  background-color: #212529;
+}
+
+.btn-comprar i{
+  float: left;
+  margin-right: 3px;
+}
+
+.btn-view{
+  float: right;
+  margin-top: 8px;
+  width: 130px;
+  height: 35px;
+  border: 1px solid #212529;
+  color: white;
+  background-color: #212529;
+}
+
+.btn-view i{
+  float: left;
+  margin-right: 3px;
+}
+
+

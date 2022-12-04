@@ -1,0 +1,531 @@
+{
+  "banners": [
+    {
+      "id": 2,
+      "image": "https://storage.googleapis.com/dpw/app/uploads/2019/04/lazy-loading-nativo-imagens-iframes_.jpg",
+      "descricao": "TETSTE"
+    },
+    {
+      "id": 3,
+      "image": "https://i0.wp.com/multarte.com.br/wp-content/uploads/2015/08/imagens-amor.jpg?fit=1680%2C1050&ssl=1",
+      "descricao": "Teste__"
+    },
+    {
+      "id": 4,
+      "image": "https://i0.wp.com/techwek.com/wp-content/uploads/2020/12/imagens-da-lua-encantadoras.png?fit=1024%2C768&ssl=1",
+      "descricao": "Teste@@"
+    }
+  ],
+  "pedidos": [
+    {
+      "id": 1,
+      "produtos": "",
+      "valor": 10,
+      "desconto": 0,
+      "frete": "",
+      "rua": "Rua F",
+      "estado": "RJ",
+      "cidade": "Volta Redonda",
+      "numero": "120",
+      "telefone": 24988739500,
+      "cep": 27258485,
+      "complemento": "",
+      "image": "",
+      "opg_id": 1,
+      "opg": "Teste",
+      "user_id": 0,
+      "user": "",
+      "cupom_id": 0,
+      "cupom": "",
+      "cliente_id": 1,
+      "cliente": "Eric",
+      "emissao": "2022-10-28T03:00:00.000Z"
+    }
+  ],
+  "cupom": [
+    {
+      "id": 1,
+      "titulo": "Teste",
+      "descricao": "klnkkkk",
+      "desconto_valor": 10,
+      "desconto_porce": 0,
+      "utilizado": false,
+      "user_id": 0,
+      "user": "",
+      "image": "https://cdnstatic8.com/ajuda.brasilnaweb.com.br/wp-content/uploads/2016/12/cupons-de-desconto-black-friday-brasileira-300x157.png",
+      "validade": "2022-10-28T03:00:00.000Z",
+      "vencido": false
+    },
+    {
+      "id": 2,
+      "titulo": "Teste_1",
+      "descricao": "jk",
+      "desconto_valor": 0,
+      "desconto_porce": 16,
+      "utilizado": false,
+      "user_id": 0,
+      "user": "",
+      "image": "https://cdnstatic8.com/ajuda.brasilnaweb.com.br/wp-content/uploads/2016/12/cupons-de-desconto-black-friday-brasileira-300x157.png",
+      "validade": "2022-10-28T03:00:00.000Z",
+      "vencido": false
+    }
+  ],
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "Eric",
+      "email": "eric.hausman.m@gmail.com",
+      "rua": "Rua F",
+      "estado": "RJ",
+      "cidade": "Volta Redonda",
+      "numero": "120",
+      "telefone": "24988739500",
+      "cep": 27258485,
+      "complemento": "",
+      "image": "",
+      "senha": "1234",
+      "login": "eric"
+    }
+  ],
+  "produto": [
+    {
+      "id": 1,
+      "nome": "Produto_Teste",
+      "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "marca_id": "1",
+      "marca": "Teste",
+      "categoria_id": "1",
+      "promocao_id": "1",
+      "favorito_id": 0,
+      "semelhante_id": "1",
+      "preco": 55,
+      "promocao": "Teste",
+      "quantidade": 7,
+      "vendidos": 0,
+      "avalicao": 3,
+      "image_principal": "https://t-static.dafiti.com.br/gW0zPNWMUuebwwBWuTkhFKEYq7M=/fit-in/430x623/static.dafiti.com.br/p/hering-bermuda-hering-em-sarja-texturizada-verde-8585-71666401-1-zoom.jpg",
+      "images": "",
+      "promocaoValor": 49.5,
+      "semelhante": "Teste_1",
+      "categoria": "Teste",
+      "tamanho_id": "1",
+      "cor_id": "1",
+      "subcategoria_id": "1",
+      "subcategoria": "Teste_",
+      "tamanho": "Azul Bebê",
+      "cor": "Azul Bebê",
+      "promo": true
+    },
+    {
+      "id": 2,
+      "nome": "Produto_Teste_1",
+      "descricao": "Teste",
+      "marca_id": "2",
+      "marca": "Teste_1",
+      "categoria_id": "1",
+      "promocao_id": "1",
+      "favorito_id": 0,
+      "semelhante_id": "1",
+      "preco": 10,
+      "promocao": "Teste",
+      "quantidade": 4,
+      "vendidos": 0,
+      "avalicao": 4,
+      "image_principal": "https://t-static.dafiti.com.br/W2ZDbtAPtsx6Y0Rh3kCyEJvu1p0=/fit-in/430x623/static.dafiti.com.br/p/ks-casual-%26-sport-bermuda-jeans-curta-delav%c3%aa-rasgada-masculina-azul-claro-3096-16025221-1-zoom.jpg",
+      "images": "",
+      "semelhante": "Teste_1",
+      "categoria": "Teste",
+      "promocaoValor": 9,
+      "promo": true
+    },
+    {
+      "id": 3,
+      "nome": "Produto_Teste_2",
+      "descricao": "Teste",
+      "marca_id": "2",
+      "marca": "Teste_1",
+      "categoria_id": "1",
+      "promocao_id": "1",
+      "favorito_id": 0,
+      "semelhante_id": "1",
+      "preco": 10,
+      "quantidade": 10,
+      "vendidos": 0,
+      "avalicao": 0,
+      "image_principal": "https://t-static.dafiti.com.br/YfafHic-K4q7UEHDL9NV4cIR5w0=/fit-in/430x623/static.dafiti.com.br/p/hering-bermuda-hering-b%c3%a1sica-chino-em-sarja-preto-4015-9961117-1-zoom.jpg",
+      "images": "",
+      "semelhante": "Teste_1",
+      "categoria": "Teste",
+      "promocaoValor": 9,
+      "promocao": "Teste",
+      "promo": true
+    },
+    {
+      "id": 4,
+      "nome": "Produto_Teste_3",
+      "descricao": "Produto 3",
+      "marca_id": "2",
+      "marca": "Teste_1",
+      "categoria_id": "1",
+      "promocao_id": "1",
+      "favorito_id": 0,
+      "semelhante_id": "1",
+      "preco": 14.44,
+      "promocao": "Teste",
+      "quantidade": 3,
+      "vendidos": 0,
+      "avalicao": 0,
+      "image_principal": "https://t-static.dafiti.com.br/sGtwfjrPZF7KUkmqJU28DU6HHtU=/fit-in/430x623/static.dafiti.com.br/p/nike-bermuda-nike-reta-dry-hprdry-lt-yoga-azul-7853-7276489-1-zoom.jpg",
+      "images": "",
+      "semelhante": "Teste_1",
+      "categoria": "Teste",
+      "promocaoValor": 12.995999999999999,
+      "promo": true
+    },
+    {
+      "id": 5,
+      "nome": "Produto_Teste_4",
+      "descricao": "sdsdsdsd",
+      "marca_id": "2",
+      "marca": "Teste_1",
+      "categoria_id": 0,
+      "promocao_id": "1",
+      "favorito_id": 0,
+      "semelhante_id": 0,
+      "preco": 75.99,
+      "promocao": "Teste",
+      "quantidade": 0,
+      "vendidos": 0,
+      "avalicao": 0,
+      "image_principal": "https://t-static.dafiti.com.br/w0F2SF0dvDQZKte2vgQX0rScPJ0=/fit-in/430x623/static.dafiti.com.br/p/gap-bermuda-sarja-gap-reta-amarra%c3%a7%c3%a3o-bege-1701-38629611-1-zoom.jpg",
+      "images": "",
+      "semelhante": "",
+      "categoria": "",
+      "promocaoValor": 68.39099999999999,
+      "cor_id": 0,
+      "cor": "",
+      "tamanho_id": 0,
+      "tamanho": "",
+      "subcategoria_id": 0,
+      "subcategoria": "",
+      "promo": true
+    },
+    {
+      "id": 6,
+      "nome": "Produto_Teste_5",
+      "descricao": "",
+      "marca_id": 0,
+      "marca": "",
+      "categoria_id": 0,
+      "promocao_id": "1",
+      "favorito_id": 0,
+      "semelhante_id": 0,
+      "preco": 26,
+      "promocao": "Teste",
+      "quantidade": 0,
+      "vendidos": 0,
+      "avalicao": 0,
+      "image_principal": "https://t-static.dafiti.com.br/GQ7NuBtijX9dXHGSYeFnZ40ooSo=/fit-in/60x87/static.dafiti.com.br/p/calvin-klein-jeans-camiseta-calvin-klein-jeans-logo-branca-7582-9603857-1-feed.jpg",
+      "images": "",
+      "semelhante": "",
+      "categoria": "",
+      "promocaoValor": 23.4,
+      "cor_id": 0,
+      "cor": "",
+      "tamanho_id": 0,
+      "tamanho": "",
+      "subcategoria_id": 0,
+      "subcategoria": "",
+      "promo": true
+    },
+    {
+      "id": 7,
+      "nome": "Produto_Teste_6",
+      "descricao": "",
+      "marca_id": 0,
+      "marca": "",
+      "categoria_id": 0,
+      "promocao_id": "1",
+      "favorito_id": 0,
+      "semelhante_id": 0,
+      "preco": 20,
+      "promocao": "Teste",
+      "quantidade": 0,
+      "vendidos": 0,
+      "avalicao": 0,
+      "image_principal": "https://t-static.dafiti.com.br/hJe4mVk8sGXtD6tia6xG0xbkfdM=/fit-in/60x87/static.dafiti.com.br/p/adidas-originals-camiseta-adidas-originals-essential-preta-0885-9302737-1-feed.jpg",
+      "images": "",
+      "semelhante": "",
+      "categoria": "",
+      "promocaoValor": 18,
+      "cor_id": 0,
+      "cor": "",
+      "tamanho_id": 0,
+      "tamanho": "",
+      "subcategoria_id": 0,
+      "subcategoria": "",
+      "promo": true
+    },
+    {
+      "id": 8,
+      "nome": "Produto_Teste_7",
+      "descricao": "",
+      "marca_id": 0,
+      "marca": "",
+      "categoria_id": 0,
+      "promocao_id": "1",
+      "favorito_id": 0,
+      "semelhante_id": 0,
+      "preco": 70,
+      "promocao": "Teste",
+      "quantidade": 0,
+      "vendidos": 0,
+      "avalicao": 0,
+      "image_principal": "https://t-static.dafiti.com.br/heEIJ3QE84Evaw7RJePx-HXYqZo=/fit-in/60x87/static.dafiti.com.br/p/adidas-originals-camiseta-adidas-originals-3-stripes-branca-8663-5902737-1-feed.jpg",
+      "images": "",
+      "semelhante": "",
+      "categoria": "",
+      "promocaoValor": 63,
+      "cor_id": 0,
+      "cor": "",
+      "tamanho_id": 0,
+      "tamanho": "",
+      "subcategoria_id": 0,
+      "subcategoria": "",
+      "promo": true
+    },
+    {
+      "id": 9,
+      "nome": "Produto_Teste_8",
+      "descricao": "",
+      "marca_id": 0,
+      "marca": "",
+      "categoria_id": 0,
+      "promocao_id": "1",
+      "favorito_id": 0,
+      "semelhante_id": 0,
+      "preco": 10,
+      "promocao": "Teste",
+      "quantidade": 0,
+      "vendidos": 0,
+      "avalicao": 0,
+      "image_principal": "https://t-static.dafiti.com.br/m_i7FxPY5jgZetiyGZualpsN7M0=/fit-in/60x87/static.dafiti.com.br/p/nike-camiseta-nike-dry-lgd-2.0-preta-0244-2792191-1-feed.jpg",
+      "images": "",
+      "semelhante": "",
+      "categoria": "",
+      "promocaoValor": 9,
+      "cor_id": 0,
+      "cor": "",
+      "tamanho_id": 0,
+      "tamanho": "",
+      "subcategoria_id": 0,
+      "subcategoria": "",
+      "promo": true
+    },
+    {
+      "id": 10,
+      "nome": "Produto_Teste_9",
+      "descricao": "",
+      "marca_id": 0,
+      "marca": "",
+      "categoria_id": 0,
+      "promocao_id": "1",
+      "favorito_id": 0,
+      "semelhante_id": 0,
+      "preco": 100,
+      "promocao": "Teste",
+      "quantidade": 0,
+      "vendidos": 0,
+      "avalicao": 0,
+      "image_principal": "https://t-static.dafiti.com.br/S_QAgt1-BQmrga8DJpq-X8A4iTU=/fit-in/60x87/static.dafiti.com.br/p/colcci-camiseta-colcci-logo-azul-marinho-4540-71832911-1-feed.jpg",
+      "images": "",
+      "semelhante": "",
+      "categoria": "",
+      "promocaoValor": 90,
+      "cor_id": 0,
+      "cor": "",
+      "tamanho_id": 0,
+      "tamanho": "",
+      "subcategoria_id": 0,
+      "subcategoria": "",
+      "promo": true
+    },
+    {
+      "id": 11,
+      "nome": "dwds",
+      "descricao": "dsd",
+      "marca_id": "1",
+      "marca": "Teste",
+      "categoria_id": "1",
+      "promocao_id": "1",
+      "favorito_id": 0,
+      "semelhante_id": "1",
+      "preco": 10,
+      "promocao": "Teste",
+      "promo": true,
+      "quantidade": 10,
+      "vendidos": 0,
+      "avalicao": 0,
+      "image_principal": "https://avatars.githubusercontent.com/u/109166965?s=400&u=fc0c34b8d06b73f20bac6560fecc9bf44dcef08f&v=4",
+      "images": "",
+      "semelhante": "Teste_1",
+      "categoria": "Teste",
+      "promocaoValor": 9,
+      "cor_id": "1",
+      "cor": "Azul Bebê",
+      "tamanho_id": "1",
+      "tamanho": "Azul Bebê",
+      "subcategoria_id": "1",
+      "subcategoria": "Teste_"
+    }
+  ],
+  "categoria": [
+    {
+      "id": 1,
+      "nome": "Teste"
+    }
+  ],
+  "marca": [
+    {
+      "id": 1,
+      "nome": "Teste"
+    },
+    {
+      "id": 2,
+      "nome": "Teste_1"
+    },
+    {
+      "id": 3,
+      "nome": "Teste_2"
+    }
+  ],
+  "promocoes": [
+    {
+      "id": 1,
+      "nome": "Teste",
+      "taxa": 10
+    }
+  ],
+  "favorito": [],
+  "endereco": [
+    {
+      "id": 1,
+      "cliente_id": 1,
+      "cliente": "Teste",
+      "rua": "Rua F",
+      "estado": "RJ",
+      "cidade": "Volta Redonda",
+      "numero": "120",
+      "cep": 27258485,
+      "complemento": ""
+    }
+  ],
+  "pedido_produtos": [],
+  "destaque": [
+    {
+      "id": 1,
+      "titulo": "Teste_",
+      "descricao": "teste",
+      "image": "https://storage.googleapis.com/dpw/app/uploads/2019/04/lazy-loading-nativo-imagens-iframes_.jpg"
+    }
+  ],
+  "contato": [
+    {
+      "id": 1,
+      "nome": "Eric",
+      "telefone": "(24) 98873-9500",
+      "email": "eric.hausman.m@gmail.com",
+      "instagram": "Hausmaneric",
+      "whatsapp": "(24) 98873-9500",
+      "facebook": "EricHausman"
+    }
+  ],
+  "subcategoria": [
+    {
+      "id": 1,
+      "titulo": "Teste_",
+      "categoria_id": "1",
+      "categoria": "Teste"
+    }
+  ],
+  "cor": [
+    {
+      "id": 1,
+      "titulo": "Azul Bebê",
+      "cor": "#00ffff"
+    }
+  ],
+  "tamanho": [
+    {
+      "id": 1,
+      "titulo": "Teste_"
+    }
+  ],
+  "opg": [
+    {
+      "id": 1,
+      "nome": "Teste",
+      "parcelas": 4,
+      "tipo": 0,
+      "promocao": 0
+    }
+  ],
+  "semelhante": [
+    {
+      "id": 1,
+      "nome": "Teste_1"
+    }
+  ],
+  "Img_Prod": [
+    {
+      "id": 1,
+      "image": "https://avatars.githubusercontent.com/u/109166965?s=400&u=fc0c34b8d06b73f20bac6560fecc9bf44dcef08f&v=4",
+      "prod_id": 1
+    },
+    {
+      "id": 2,
+      "image": "https://avatars.githubusercontent.com/u/109166965?s=400&u=fc0c34b8d06b73f20bac6560fecc9bf44dcef08f&v=4",
+      "prod_id": 1
+    },
+    {
+      "id": 4,
+      "image": "https://avatars.githubusercontent.com/u/109166965?s=400&u=fc0c34b8d06b73f20bac6560fecc9bf44dcef08f&v=4",
+      "prod_id": 4
+    },
+    {
+      "id": 5,
+      "image": "https://avatars.githubusercontent.com/u/109166965?s=400&u=fc0c34b8d06b73f20bac6560fecc9bf44dcef08f&v=4",
+      "prod_id": 0
+    },
+    {
+      "id": 6,
+      "image": "https://avatars.githubusercontent.com/u/109166965?s=400&u=fc0c34b8d06b73f20bac6560fecc9bf44dcef08f&v=4",
+      "prod_id": 0
+    },
+    {
+      "id": 9,
+      "image": "https://avatars.githubusercontent.com/u/109166965?s=400&u=fc0c34b8d06b73f20bac6560fecc9bf44dcef08f&v=4",
+      "prod_id": 11
+    }
+  ],
+  "login": [
+    {
+      "nome": "Eric",
+      "login": "eric.hausman.m@gmail.com",
+      "email": "eric.hausman.m@gmail.com",
+      "senha": "1234",
+      "nivel": "3",
+      "image": "https://avatars.githubusercontent.com/u/109166965?s=400&u=fc0c34b8d06b73f20bac6560fecc9bf44dcef08f&v=4",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nome": "Fabricio",
+      "login": "hausman.info@gmail.com",
+      "email": "hausman.info@gmail.com",
+      "senha": "1234",
+      "nivel": 2,
+      "image": "https://pps.whatsapp.net/v/t61.24694-24/309141645_662411555093012_7466818390952535142_n.jpg?ccb=11-4&oh=01_AdSZ-32A_K6PTj3Nohnf2JZ0TK3NR2NW7hUcQG4QEbjieg&oe=635D3A24"
+    }
+  ]
+}

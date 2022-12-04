@@ -1,0 +1,44 @@
+.header{
+  display: flex;
+  align-items: center;
+  background: hsla(105, 46%, 30%, 1);
+  background: linear-gradient(90deg, hsla(105, 46%, 10%, 1) 0%, hsla(160, 29%, 36%, 1) 100%);
+  height: 100px;
+}
+
+.header a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.logo{
+  width: 130px;
+  opacity: .8s;
+  transition: .2s;
+}
+
+.logo:hover{
+  width: 150px;
+  opacity: 1;
+}
+
+.title-grouo{
+  padding-left: 25px;
+}
+
+.title{
+  font-size: 1.5rem;
+}
+
+.header .title-grouo i{
+  padding-right: 5px;
+}
+
+.img_perfil{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 30px;
+}

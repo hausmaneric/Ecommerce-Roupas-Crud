@@ -1,0 +1,19 @@
+<mat-list>
+  <mat-list-item>Opção de Pagamento</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<form>
+  <mat-form-field appearance="outline">
+    <mat-label>Título</mat-label>
+    <input [(ngModel)]="opgForm.nome" name="opgNome" matInput placeholder="Título...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Parcelas</mat-label>
+    <input type="number" [(ngModel)]="opgForm.parcelas" min="0"  name="opgParcela" matInput placeholder="ParcelaS...">
+  </mat-form-field>
+  <div style="padding-top: 8px; float: right;" mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" (click)="gotoList()">Cancelar</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="createOpg()">Salvar</button>
+  </div>
+</form>

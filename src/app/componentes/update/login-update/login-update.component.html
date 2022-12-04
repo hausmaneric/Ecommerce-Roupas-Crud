@@ -1,0 +1,34 @@
+<mat-list>
+  <mat-list-item>Usuário</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<form>
+  <mat-form-field appearance="outline">
+    <mat-label>Nome</mat-label>
+    <input name="loginNome" id="loginNome" [(ngModel)]="loginForm.nome" matInput placeholder="Nome...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Login</mat-label>
+    <input name="loginLogin" id="loginLogin" [(ngModel)]="loginForm.login" matInput placeholder="Login...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Senha</mat-label>
+    <input type="password" name="loginSenha" id="loginSenha" [(ngModel)]="loginForm.senha" matInput placeholder="Senha...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Nível</mat-label>
+    <input type="number" min="1" max="3" name="loginNivel" id="loginNivel" [(ngModel)]="loginForm.nivel" matInput placeholder="Nível...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Imagem</mat-label>
+    <input [(ngModel)]="loginForm.image" name="loginImage" matInput placeholder="Imagem...">
+    <div class="image_1">
+      <img src="{{ loginForm.image }}" alt="">
+    </div>
+  </mat-form-field>
+  <div style="padding-top: 8px; float: right;" mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" (click)="gotoList()">Cancelar</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="updateLogin()">Salvar</button>
+  </div>
+</form>

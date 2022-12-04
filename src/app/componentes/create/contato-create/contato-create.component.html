@@ -1,0 +1,35 @@
+<mat-list>
+  <mat-list-item>Contato</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<form>
+  <mat-form-field appearance="outline">
+    <mat-label>Nome</mat-label>
+    <input name="loginNome" id="loginNome" [(ngModel)]="contatoForm.nome" matInput placeholder="Nome...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Telefone</mat-label>
+    <input type="tel" name="contatoTel" id="contatoTel" mask="(00) 00000-0000" [(ngModel)]="contatoForm.telefone" matInput placeholder="Telefone...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>E-mail</mat-label>
+    <input name="loginNome" id="loginNome" type="email" [(ngModel)]="contatoForm.email" matInput placeholder="E-mail...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Instagram</mat-label>
+    <input name="loginNome" id="loginNome" [(ngModel)]="contatoForm.instagram" matInput placeholder="Instagram...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Whatsapp</mat-label>
+    <input type="tel" name="contatoWhatsapp" id="contatoWhatsapp" mask="(00) 00000-0000" [(ngModel)]="contatoForm.whatsapp" matInput placeholder="Whatsapp...">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Facebook</mat-label>
+    <input name="loginNome" id="loginNome" [(ngModel)]="contatoForm.facebook" matInput placeholder="Facebook...">
+  </mat-form-field>
+  <div style="padding-top: 8px; float: right;" mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" (click)="gotoList()">Cancelar</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="createContato()">Salvar</button>
+  </div>
+</form>
