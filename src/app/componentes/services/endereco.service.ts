@@ -1,30 +1,32 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Endereco } from '../models/endereco';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EnderecoService {
   constructor(private http: HttpClient) { }
+  private readonly API = environment.API;
 
   getEndereco(){
-    return this.http.get<Endereco[]>("http://localhost:3000/Endereco");
+    return this.http.get<Endereco[]>(`${this.API}/Endereco`);
   }
 
   createEndereco(payLoad:Endereco){
-    return this.http.post<Endereco>("http://localhost:3000/Endereco", payLoad);
+    return this.http.post<Endereco>(`${this.API}/Endereco`, payLoad);
   }
 
   getByIdEndereco(id:number){
-    return this.http.get<Endereco>(`http://localhost:3000/Endereco/${id}`);
+    return this.http.get<Endereco>(`${this.API}/Endereco/${id}`);
   }
 
   updateEndereco(payLoad:Endereco){
-    return this.http.put(`http://localhost:3000/Endereco/${payLoad.id}`,payLoad);
+    return this.http.put(`${this.API}/Endereco/${payLoad.id}`,payLoad);
   }
 
   deleteEndereco(id:number){
-    return this.http.delete<Endereco>(`http://localhost:3000/Endereco/${id}`);
+    return this.http.delete<Endereco>(`${this.API}/Endereco/${id}`);
   }
 }

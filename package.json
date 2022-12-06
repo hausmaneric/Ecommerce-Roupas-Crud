@@ -1,13 +1,17 @@
 {
   "name": "ecommerce-roupas",
   "version": "0.0.0",
+  "engines": {
+    "node": "16.17.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "json.server":"json-server --watch db.json"
+    "json.server": "json-server db.json",
+    "start:app:server":"concurrently --kill-others \"npm run json:server\" \"npm run app\""
   },
   "private": true,
   "dependencies": {
@@ -24,7 +28,8 @@
     "angular-money-mask": "^1.0.0",
     "bootstrap": "^5.2.2",
     "jquery": "^3.6.1",
-    "json-server": "^0.17.0",
+    "json-server": "^0.17.1",
+    "live-server": "^1.2.2",
     "ngx-mask": "^14.2.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

@@ -2,12 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Login } from '../models/login';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
+  private API = environment.API;
 
   public Autenticado: boolean = false;
 
@@ -18,26 +20,27 @@ export class LoginService {
   mostrarImg = new EventEmitter<string>();
   nome!: string;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) {
+   }
 
   createLogin(payLoad:Login){
-    return this.http.post<Login>("http://localhost:3000/Login", payLoad);
+    return this.http.post<Login>(`${this.API}/Login`, payLoad);
   }
 
   getByIdLogin(id:number){
-    return this.http.get<Login>(`http://localhost:3000/Login/${id}`);
+    return this.http.get<Login>(`${this.API}/Login/${id}`);
   }
 
   updateLogin(payLoad:Login){
-    return this.http.put(`http://localhost:3000/Login/${payLoad.id}`,payLoad);
+    return this.http.put(`${this.API}/Login/${payLoad.id}`,payLoad);
   }
 
   deleteLogin(id:number){
-    return this.http.delete<Login>(`http://localhost:3000/Login/${id}`);
+    return this.http.delete<Login>(`${this.API}/Login/${id}`);
   }
 
   getLogin(){
-    return this.http.get<Login[]>("http://localhost:3000/Login");
+    return this.http.get<Login[]>(`${this.API}/Login`);
   }
 
   logar(login: string, senha: string){
@@ -54,11 +57,11 @@ export class LoginService {
 
         this.router.navigate(['home']);
       }else{
-        alert("usuário não encontrado")
+        alert(`usuário não encontrado`)
         this.mostrarMenuEmitter.emit(false);
       }
     },error=>{
-      alert("Somethin went wrong");
+      alert(`Somethin went wrong`);
     })
   }
 

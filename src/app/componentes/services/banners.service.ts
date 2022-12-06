@@ -8,27 +8,28 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class BannersService {
+  private readonly API = environment.API;
 
   constructor(private http: HttpClient) { }
 
   getBanner(){
-    return this.http.get<Banners[]>("http://localhost:3000/banners");
+    return this.http.get<Banners[]>(`${this.API}/banners`);
   }
 
   createBanner(payLoad:Banners){
-    return this.http.post<Banners>("http://localhost:3000/banners", payLoad);
+    return this.http.post<Banners>(`${this.API}/banners`, payLoad);
   }
 
   getByIdBanner(id:number){
-    return this.http.get<Banners>(`http://localhost:3000/banners/${id}`);
+    return this.http.get<Banners>(`${this.API}/banners/${id}`);
   }
 
   updateBanner(payLoad:Banners){
-    return this.http.put(`http://localhost:3000/banners/${payLoad.id}`,payLoad);
+    return this.http.put(`${this.API}/banners/${payLoad.id}`,payLoad);
   }
 
   deleteBanner(id:number){
-    return this.http.delete<Banners>(`http://localhost:3000/banners/${id}`);
+    return this.http.delete<Banners>(`${this.API}/banners/${id}`);
   }
 
 }

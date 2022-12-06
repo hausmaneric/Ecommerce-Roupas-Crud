@@ -526,6 +526,15 @@
       "senha": "1234",
       "nivel": 2,
       "image": "https://pps.whatsapp.net/v/t61.24694-24/309141645_662411555093012_7466818390952535142_n.jpg?ccb=11-4&oh=01_AdSZ-32A_K6PTj3Nohnf2JZ0TK3NR2NW7hUcQG4QEbjieg&oe=635D3A24"
+    },
+    {
+      "id": 3,
+      "nome": "Fabricio",
+      "login": "fabrcio",
+      "email": "fabrcio",
+      "senha": "1234",
+      "nivel": 3,
+      "image": ""
     }
   ]
 }
