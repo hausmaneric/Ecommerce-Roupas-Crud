@@ -10,7 +10,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "json.server": "json-server db.json",
-    "start:app:server":"concurrently --kill-others \"npm run json:server\" \"npm run app\""
+    "start:app:server":"concurrently --kill-others \"npm run json:server db.json\" \"npm run app\""
   },
   "private": true,
   "dependencies": {
